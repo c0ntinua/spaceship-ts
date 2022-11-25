@@ -1,0 +1,32 @@
+label {
+    /* font-family: 'Xanh Mono', monospace; */
+    font-family: 'Nova Mono', monospace;
+}
+button {
+    /* font-family: 'Xanh Mono', monospace; */
+    font-family: 'Nova Mono', monospace;
+}
+body {
+    background-color: rgb(103, 98, 98);
+}
+
+a {
+    font-family: 'Nova Mono', monospace;
+
+}
+el {
+    font-family: 'Nova Mono', monospace;
+
+}
+input {
+    width : 20%;
+}
+.container {
+    position: absolute;
+  }
+  
+  #canvas {
+    position: relative;
+    background: #000;
+  }
+  

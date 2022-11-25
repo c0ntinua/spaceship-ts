@@ -12,6 +12,7 @@
       "input.ts",
       "main.ts",
       "manager.ts",
+      "automata.ts",
       "plot.ts",
       "filter.ts",
     ]
