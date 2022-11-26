@@ -30,9 +30,7 @@ function fixedIndex(x : number , modulus : number ) : number {
 
 function seedAutomata() {
     for (let col = 0 ; col < global_cols ; col++) {
-        for (let row = 0 ; row < global_rows ; row++) {
-            cells[get(col,row)] = Math.floor(Math.random() * states);
-        }
+        cells[get(col,row)] = Math.floor(Math.random() * states);
     }
 }
 

@@ -1,3 +1,4 @@
+
 label {
     /* font-family: 'Xanh Mono', monospace; */
     font-family: 'Nova Mono', monospace;
@@ -15,18 +16,21 @@ a {
 
 }
 el {
-    font-family: 'Nova Mono', monospace;
+    font-family: Monoton;
+    text-indent: 5000px
 
 }
-input {
-    width : 20%;
+#rule {
+    font-family: Monoton;
+    width : 50%;
 }
 .container {
     position: absolute;
-  }
-  
-  #canvas {
-    position: relative;
+}
+#canvas {
+    position: absolute;
     background: #000;
-  }
+    font-family: Monoton;
+}
+
   
