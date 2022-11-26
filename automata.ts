@@ -38,9 +38,9 @@ function seedFilter() {
 }
 
 function calculateAutomata() {
-	for (let r = 1; r < global_rows; r++) {
+	for (let r = 0; r < global_rows - 1; r++) {
 		for (let c = 0; c < global_cols;c++) {
-			cells[get(c,r)] = filter[rowValue(c,r)];
+			cells[get(c,r+1)] = filter[rowValue(c,r)];
 		}
 	}
 }

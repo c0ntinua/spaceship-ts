@@ -1,13 +1,12 @@
 canvas = document.querySelector('canvas');
 
-canvas.addEventListener("mousedown", function(e)
-{
+canvas.addEventListener("mousedown", function(e) {
     getMousePosition(canvas, e);
 });
-//seedAutomata();
+
+setChoices();
 seedFilter();
 if (!mountain_mode) seedAutomata();
 calculateAutomata();
 plotAutomata();
 plotRule();
-//let interval = setInterval(updatePlot,delay);

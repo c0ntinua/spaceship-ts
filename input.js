@@ -26,7 +26,63 @@ function userUpdateFilter(x, y) {
             filter[target_index] = 0;
     }
     plotRule();
-    calculatePartialAutomata(1);
+    calculatePartialAutomata(0);
     plotAutomata();
+}
+function getWidth() {
+    canvas.width = parseInt((document.getElementById("width")).value);
+    pixel_width = canvas.width / global_cols;
+}
+function setWidth() {
+    (document.getElementById("width")).value = canvas.width.toString();
+}
+function getHeight() {
+    canvas.height = parseInt((document.getElementById("height")).value);
+    pixel_height = canvas.height / global_rows;
+}
+function setHeight() {
+    (document.getElementById("height")).value = canvas.height.toString();
+}
+function getCols() {
+    global_cols = parseInt((document.getElementById("cols")).value);
+    pixel_width = canvas.width / global_cols;
+    reset();
+}
+function setCols() {
+    (document.getElementById("cols")).value = global_cols.toString();
+}
+function getRows() {
+    global_rows = parseInt((document.getElementById("rows")).value);
+    pixel_height = canvas.height / global_rows;
+    reset();
+}
+function setRows() {
+    (document.getElementById("rows")).value = global_rows.toString();
+}
+function getChoices() {
+    getWidth();
+    getHeight();
+    getRows();
+    getCols();
+}
+function setChoices() {
+    setWidth();
+    setHeight();
+    setRows();
+    setCols();
+}
+function reset() {
+    cells = new Array(global_rows * global_cols).fill(0);
+    if (!mountain_mode)
+        seedAutomata();
+    calculateAutomata();
+    plotAutomata();
+    plotRule();
+}
+function newFilter() {
+    seedFilter();
+    calculateAutomata();
+    plotAutomata();
+    plotRule();
 }
 //# sourceMappingURL=input.js.map

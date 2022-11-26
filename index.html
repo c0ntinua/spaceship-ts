@@ -12,6 +12,18 @@
     <div class="container">
         <canvas id="canvas" width=1000 height=1000></canvas>
     </div>
+    <label for="rows">width</label>
+    <input type="text" id="width" name="rows" >
+    <label for="rows">height</label>
+    <input type="text" id="height" name="cols">
+    <label for="rows">cols</label>
+    <input type="text" id="cols" name="rows" >
+    <label for="rows">rows</label>
+    <input type="text" id="rows" name="rows" >
+    <button onclick="getChoices();"> apply </button>
+    <button onclick="reset();"> seed </button>
+    <button onclick="newFilter();"> new rule </button>
+
     <script src="filter.js"></script>
     <script src="automata.js"></script>
     <script src="plot.js"></script>

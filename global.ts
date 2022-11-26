@@ -1,7 +1,7 @@
 let canvas = document.getElementById("canvas") as HTMLCanvasElement;
 let pen = canvas.getContext("2d");
-let global_rows : number = 50;
-let global_cols : number = 150;
+let global_rows : number = 39;
+let global_cols : number = 107;
 canvas.style.top = "50px";
 canvas.style.left = "50px";
 let target_col : number = 0;
