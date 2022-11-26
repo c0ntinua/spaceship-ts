@@ -1,13 +1,10 @@
 canvas = document.querySelector('canvas');
-var myFont = new FontFace('Monoton', 'url(Monoton-Regular.ttf)');
-myFont.load().then(function (font) {
-    document.fonts.add(font);
-    console.log('Font loaded');
-});
 canvas.addEventListener("mousedown", function (e) {
     getMousePosition(canvas, e);
 });
 seedFilter();
+if (!mountain_mode)
+    seedAutomata();
 calculateAutomata();
 plotAutomata();
 plotRule();

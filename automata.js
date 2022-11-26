@@ -30,9 +30,7 @@ function fixedIndex(x, modulus) {
 }
 function seedAutomata() {
     for (let col = 0; col < global_cols; col++) {
-        for (let row = 0; row < global_rows; row++) {
-            cells[get(col, row)] = Math.floor(Math.random() * states);
-        }
+        cells[get(col, 0)] = Math.floor(Math.random() * states);
     }
 }
 function seedFilter() {
@@ -48,7 +46,6 @@ function calculateAutomata() {
     }
 }
 function calculatePartialAutomata(start_row) {
-    console.log("starting at row " + start_row);
     for (let r = start_row; r < global_rows - 1; r++) {
         for (let c = 0; c < global_cols; c++) {
             cells[get(c, r + 1)] = filter[rowValue(c, r)];

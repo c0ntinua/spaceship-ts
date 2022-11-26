@@ -6,7 +6,7 @@ function plotRule() {
         pen.beginPath();
         pen.rect(0, 0, canvas.width, rule_digit_height);
         pen.fill();
-        pen.fillStyle = "#FFFFFF";
+        pen.fillStyle = "#FF0000";
         pen.font = "40px Nanum";
         for (let col = 0; col < filter_length; col++) {
             pen.beginPath();

@@ -1,7 +1,5 @@
 function get(col : number, row : number) : number {
-    //return global_cols*row + col;
     return col*global_rows + row;
-    //return row*global_cols + col;
 }
 
 function rowValue(col :  number , row : number ) : number {
@@ -18,7 +16,6 @@ function rowValue(col :  number , row : number ) : number {
 }
 
 function fixedIndex(x : number , modulus : number ) : number {
-    //console.log('recieved ' + x);
     if (x >= 0 && x < modulus) return x;
     if (x < 0) {
         while (x < 0) { x += modulus };
@@ -30,7 +27,7 @@ function fixedIndex(x : number , modulus : number ) : number {
 
 function seedAutomata() {
     for (let col = 0 ; col < global_cols ; col++) {
-        cells[get(col,row)] = Math.floor(Math.random() * states);
+        cells[get(col,0)] = Math.floor(Math.random() * states);
     }
 }
 
@@ -49,7 +46,6 @@ function calculateAutomata() {
 }
 
 function calculatePartialAutomata(start_row :  number) {
-    console.log("starting at row " + start_row);
 	for (let r = start_row; r < global_rows - 1; r++) {
 		for (let c = 0; c < global_cols;c++) {
 			cells[get(c,r+1)] = filter[rowValue(c,r)];

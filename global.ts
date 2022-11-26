@@ -7,11 +7,11 @@ canvas.style.left = "50px";
 let target_col : number = 0;
 let target_row : number = 0;
 let delay = 10;
-
-let pixel_height : number = canvas.height/global_rows;
-let pixel_width : number  = canvas.width/global_cols;
 let rule_digit_width = 30;
 let rule_digit_height = 25;
+let pixel_height : number = (canvas.height - rule_digit_height)/global_rows;
+let pixel_width : number  = canvas.width/global_cols;
+
 let rule_down_adjustment = 3;
 let rule_right_adjustment = 25;
 let neighbors : number = 5;

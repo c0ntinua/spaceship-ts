@@ -1,4 +1,5 @@
 function plotAutomata() {
+    pen.fillStyle = "#FFFFFF";
     for (let row = 0; row < global_rows; row++) {
         for (let col = 0; col < global_cols; col++) {
             pen.fillStyle = color[cells[get(col, row)]];
