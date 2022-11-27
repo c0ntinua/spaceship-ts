@@ -67,6 +67,7 @@ function getChoices(){
     getHeight();
     getRows();
     getCols();
+    getFilter();
 }
 
 
@@ -75,6 +76,7 @@ function setChoices(){
     setHeight();
     setRows();
     setCols();
+    setFilter()
 }
 function reset() {
     cells = new Array(global_rows * global_cols).fill(0);

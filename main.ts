@@ -3,9 +3,9 @@ canvas = document.querySelector('canvas');
 canvas.addEventListener("mousedown", function(e) {
     getMousePosition(canvas, e);
 });
-
-setChoices();
 seedFilter();
+setChoices();
+
 if (!mountain_mode) seedAutomata();
 calculateAutomata();
 plotAutomata();

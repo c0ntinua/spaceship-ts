@@ -30,6 +30,7 @@ function plotRule() {
         pen.fill();
     }
   });
+  setFilter();
 }
 // function plotRule() {
 
@@ -41,3 +42,38 @@ function plotRule() {
 //         pen.fill();
 //     }
 // }
+
+function getFilter() {
+  let filter_code = (document.getElementById(`filter`) as HTMLInputElement).value;
+  filter =  getRule(filter_code);
+}
+
+function getRule(filter_code :  string) {
+  let filter_cell = [];
+  let temp = 0;
+  for (let i = 0; i < filter_length; i++) {
+      if (filter_code.length <= i) {
+          filter_cell.push(0);
+      } else {
+          filter_cell.push(parseInt(filter_code[i])); 
+          // if (parseInt(code[i]) == 1) filter_cell.push(1); 
+          // else filter_cell.push(0);
+      }    
+  }
+  return filter_cell;
+}
+// ((document.getElementById("rows")) as HTMLInputElement).value = global_rows.toString();
+// parseInt(((document.getElementById("rows")) as HTMLInputElement).value);
+
+function setFilter() {
+  let filter_code = getCode(filter);
+  (document.getElementById(`filter`) as  HTMLInputElement).value = filter_code;
+}
+
+function getCode(filter : number[]) {
+  let code = "";
+  for (let i = 0; i < filter_length; i++) {
+      code = code.concat(filter[i].toString());
+  }
+  return code;
+}

@@ -14,5 +14,34 @@ function plotRule() {
             pen.fill();
         }
     });
+    setFilter();
+}
+function getFilter() {
+    let filter_code = document.getElementById(`filter`).value;
+    filter = getRule(filter_code);
+}
+function getRule(filter_code) {
+    let filter_cell = [];
+    let temp = 0;
+    for (let i = 0; i < filter_length; i++) {
+        if (filter_code.length <= i) {
+            filter_cell.push(0);
+        }
+        else {
+            filter_cell.push(parseInt(filter_code[i]));
+        }
+    }
+    return filter_cell;
+}
+function setFilter() {
+    let filter_code = getCode(filter);
+    document.getElementById(`filter`).value = filter_code;
+}
+function getCode(filter) {
+    let code = "";
+    for (let i = 0; i < filter_length; i++) {
+        code = code.concat(filter[i].toString());
+    }
+    return code;
 }
 //# sourceMappingURL=rule.js.map
